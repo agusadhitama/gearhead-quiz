@@ -18,7 +18,7 @@
   ██║╚██╔╝██║██║   ██║██╔══██╗██║██║
   ██║ ╚═╝ ██║╚██████╔╝██████╔╝██║███████╗
   ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚═╝╚══════╝
-        APA KAMU?
+            A P A  K A MU ?
 ```
 
 ---
@@ -108,44 +108,6 @@ Berisi 4 screen utama yang di-toggle via JavaScript:
 - Object `CARS` 15 profil mobil lengkap
 - `determineResult()` scoring engine berbasis normalisasi + mapping kombinasi
 - DOM builder + event handler murni tanpa jQuery
-
----
-
-## 🚀 Cara Deploy ke GitHub Pages
-
-### 1. Clone / Download
-```bash
-git clone https://github.com/USERNAME/gearhead-quiz.git
-cd gearhead-quiz
-```
-
-### 2. Pastikan struktur file benar
-```
-gearhead-quiz/
-├── index.html   ✓
-├── style.css    ✓
-└── quiz.js      ✓
-```
-
-### 3. Push ke GitHub
-```bash
-git add .
-git commit -m "feat: initial commit - gearhead quiz"
-git push origin main
-```
-
-### 4. Aktifkan GitHub Pages
-1. Buka repo di GitHub
-2. Klik **Settings** → **Pages**
-3. Di bagian **Source**, pilih `Deploy from a branch`
-4. Branch: `main` Folder: `/ (root)`
-5. Klik **Save**
-
-### 5. Akses
-```
-https://USERNAME.github.io/gearhead-quiz
-```
-> Tunggu 1–3 menit setelah push pertama untuk GitHub Pages aktif.
 
 ---
 
