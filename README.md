@@ -146,10 +146,10 @@ open index.html
 
 | Browser | Status |
 |---|---|
-| Chrome 90+ | ✅ Full support |
-| Firefox 88+ | ✅ Full support |
-| Safari 14+ | ✅ Full support |
-| Edge 90+ | ✅ Full support |
+| Chrome  | ✅ Full support |
+| Firefox  | ✅ Full support |
+| Safari  | ✅ Full support |
+| Edge  | ✅ Full support |
 | Mobile Chrome/Safari | ✅ Responsive |
 
 ---
