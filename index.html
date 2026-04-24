@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEARHEAD - Mobil Apa Kamu?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     GLOBAL AMBIENT LAYERS
+══════════════════════════════════════ -->
+<canvas id="bgCanvas"></canvas>
+<div class="scanlines"></div>
+<div class="vignette"></div>
+
+<!-- ══════════════════════════════════════
+     SCREEN 1 - INTRO
+══════════════════════════════════════ -->
+<section id="s-intro" class="screen active">
+  <div class="intro-grid-overlay"></div>
+
+  <div class="intro-center">
+    <div class="intro-eyebrow">
+      <span class="dot red"></span>
+      <span class="mono">GEARHEAD DNA SYSTEM</span>
+      <span class="dot red"></span>
+    </div>
+
+    <div class="intro-title-wrap">
+      <div class="intro-title-line1">MOBIL</div>
+      <div class="intro-title-line2">APA <span class="outline-text">KAMU</span></div>
+      <div class="intro-title-line3">?</div>
+    </div>
+
+    <div class="intro-divider">
+      <span></span><span class="diamond">◆</span><span></span>
+    </div>
+
+    <p class="intro-desc">
+      15 pertanyaan.<br/>
+      <em>Satu jawaban yang tidak bisa dibohongi.</em><br/>
+      DNA kamu akan menentukan mesin yang mencerminkan jiwamu.
+    </p>
+
+    <div class="intro-stats">
+      <div class="stat-item">
+        <span class="stat-num">15</span>
+        <span class="stat-label">Pertanyaan</span>
+      </div>
+      <div class="stat-sep">|</div>
+      <div class="stat-item">
+        <span class="stat-num">15</span>
+        <span class="stat-label">Hasil Mobil</span>
+      </div>
+      <div class="stat-sep">|</div>
+      <div class="stat-item">
+        <span class="stat-num">∞</span>
+        <span class="stat-label">Adrenaline</span>
+      </div>
+    </div>
+
+    <button class="btn-ignite" id="btnStart">
+      <span class="btn-ignite-inner">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        IGNITE
+      </span>
+      <span class="btn-ignite-shine"></span>
+    </button>
+
+    <p class="intro-credit-top">Fast &amp; Furious Personality Quiz</p>
+  </div>
+
+  <div class="intro-car-silhouette"></div>
+  <div class="intro-bottom-strip">
+    <marquee class="marquee-text" scrollamount="4">
+      SUPRA MK4 &nbsp;◆&nbsp; GT-R R35 &nbsp;◆&nbsp; CHARGER HELLCAT &nbsp;◆&nbsp; LAMBORGHINI AVENTADOR &nbsp;◆&nbsp; RX-7 FD &nbsp;◆&nbsp; EVO IX &nbsp;◆&nbsp; BUGATTI CHIRON &nbsp;◆&nbsp; FERRARI 488 &nbsp;◆&nbsp; MUSTANG GT500 &nbsp;◆&nbsp; PORSCHE 911 GT3 &nbsp;◆&nbsp; NSX TYPE R &nbsp;◆&nbsp; BMW M3 E46 &nbsp;◆&nbsp; SKYLINE R34 &nbsp;◆&nbsp; KOENIGSEGG AGERA &nbsp;◆&nbsp; McLAREN 720S &nbsp;◆&nbsp;
+    </marquee>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SCREEN 2 - QUIZ
+══════════════════════════════════════ -->
+<section id="s-quiz" class="screen">
+  <header class="quiz-header">
+    <div class="qh-logo">⚡ GEARHEAD</div>
+    <div class="qh-progress-wrap">
+      <div class="qh-progress-bar">
+        <div class="qh-progress-fill" id="progressFill"></div>
+        <div class="qh-progress-glow" id="progressGlow"></div>
+      </div>
+      <div class="qh-progress-label" id="progressLabel">0 / 15</div>
+    </div>
+    <div class="qh-counter">
+      <span class="qh-counter-cur" id="qCur">01</span>
+      <span class="qh-counter-sep">/</span>
+      <span class="qh-counter-tot">15</span>
+    </div>
+  </header>
+
+  <div class="quiz-stage" id="quizStage">
+    <!-- Questions injected by JS -->
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SCREEN 3 - CALCULATING
+══════════════════════════════════════ -->
+<section id="s-calc" class="screen">
+  <div class="calc-inner">
+    <div class="calc-radar">
+      <div class="radar-ring r1"></div>
+      <div class="radar-ring r2"></div>
+      <div class="radar-ring r3"></div>
+      <div class="radar-sweep"></div>
+      <div class="radar-center">⚙</div>
+    </div>
+    <div class="calc-title">MENGANALISIS</div>
+    <div class="calc-sub mono">Mencocokkan DNA kepribadianmu...</div>
+    <div class="calc-bar-wrap">
+      <div class="calc-bar-fill" id="calcBarFill"></div>
+    </div>
+    <div class="calc-status mono" id="calcStatus">Memuat profil karakter...</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SCREEN 4 - RESULT
+══════════════════════════════════════ -->
+<section id="s-result" class="screen">
+  <!-- Hero -->
+  <div class="res-hero" id="resHero">
+    <div class="res-hero-bg" id="resHeroBg"></div>
+    <img class="res-hero-img" id="resHeroImg" src="" alt="" />
+    <div class="res-hero-overlay"></div>
+    <div class="res-hero-scanlines"></div>
+
+    <div class="res-hero-content">
+      <div class="res-match-badge">
+        <span class="dot amber"></span>
+        <span class="mono">MATCH DITEMUKAN</span>
+        <span class="dot amber"></span>
+      </div>
+      <h1 class="res-car-name" id="resCarName">-</h1>
+      <p class="res-car-sub" id="resCarSub">-</p>
+    </div>
+
+    <div class="res-corner-tl"></div>
+    <div class="res-corner-tr"></div>
+    <div class="res-corner-bl"></div>
+    <div class="res-corner-br"></div>
+  </div>
+
+  <!-- Body -->
+  <div class="res-body">
+
+    <blockquote class="res-tagline" id="resTagline">-</blockquote>
+
+    <div class="res-cols">
+      <div class="res-col-main">
+        <div class="res-section-label">PROFIL KEPRIBADIAN</div>
+        <p class="res-desc" id="resDesc">-</p>
+
+        <div class="res-section-label" style="margin-top:32px">PENAMPILAN DI LAYAR</div>
+        <div class="res-ff-box" id="resFF">-</div>
+      </div>
+
+      <div class="res-col-side">
+        <div class="res-section-label">SPESIFIKASI</div>
+        <div class="res-specs" id="resSpecs"></div>
+
+        <div class="res-section-label" style="margin-top:24px">KARAKTER KAMU</div>
+        <div class="res-traits" id="resTraits"></div>
+
+        <div class="res-section-label" style="margin-top:24px">MATCH SCORE</div>
+        <div class="res-match-meter" id="resMatchMeter"></div>
+      </div>
+    </div>
+
+    <div class="res-actions">
+      <button class="btn-retry" id="btnRetry">
+        ↺ &nbsp;COBA LAGI
+      </button>
+      <div class="res-share-hint mono">Bagikan hasil ke temanmu!</div>
+    </div>
+
+    <footer class="res-footer">
+      <div class="footer-line"></div>
+      <p class="footer-credit">
+        Crafted by <span class="cr-name">Agus Satria Adhitama</span>
+        &nbsp;·&nbsp; GEARHEAD DNA System &nbsp;·
+      </p>
+    </footer>
+  </div>
+</section>
+
+<script src="quiz.js"></script>
+</body>
+</html>
